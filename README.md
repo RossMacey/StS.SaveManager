@@ -1,6 +1,6 @@
 # StSSaveManager
 
-`StSSaveManager` is a console application for managing Slay The Spire (StS) game save files. It allows users to encode and decode their save files using Base64 and XOR encryption, using the key `key`.
+`StSSaveManager` is a console application for managing Slay The Spire (StS) game save files. It allows users to encode and decode their save files using Base64 encoding and XOR encryption, using the key `key`.
 
 ## Features
 
