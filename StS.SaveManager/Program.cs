@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Text;
 
@@ -56,6 +56,12 @@ class StSSaveManager
         return Convert.ToBase64String(result);
     }
 
+    /// <summary>
+    /// Decodes a Base64-encoded string and applies XOR decryption using the specified key.
+    /// </summary>
+    /// <param name="data">The Base64-encoded string to decode.</param>
+    /// <param name="key">The key for XOR decryption. Its bytes are cycled to match the length of the decoded data.</param>
+    /// <returns>The decrypted byte array.</returns>
     static byte[] DecodeFromBase64XOR(string data, string key)
     {
         byte[] base64EncodedData = Convert.FromBase64String(data);
@@ -70,6 +76,11 @@ class StSSaveManager
         return result;
     }
 
+    /// <summary>
+    /// Retrieves a number from a fixed list of integers (1, 2, 3) based on an optional index.
+    /// </summary>
+    /// <param name="ran">A nullable integer specifying the index of the element to return. Defaults to the first element if null.</param>
+    /// <returns>The integer from the list corresponding to the provided index.</returns>
     static int WorkOutARandomNumber(int? ran)
     {
         var list = new List<int>();
