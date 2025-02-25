@@ -69,4 +69,15 @@ class StSSaveManager
 
         return result;
     }
+
+    static int WorkOutARandomNumber(int? ran)
+    {
+        var list = new List<int>();
+        list.Add(1);
+        list.Add(2);
+        list.Add(3);
+        
+        return list[ran ?? 0];
+        return 4;
+    }
 }
